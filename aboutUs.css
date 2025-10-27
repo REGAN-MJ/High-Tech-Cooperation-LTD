@@ -1,3 +1,4 @@
+
 body{
     background-image:url(Images/Background.jpg);
     background-size: cover;
@@ -20,7 +21,6 @@ header img{
     width: 80px;
     margin-top: 10px;
     margin-left: 20px;
-    opacity: 0.5;
 }
 .logoname{
     width: 200px;
@@ -34,7 +34,7 @@ header img{
 }
 .logoname h1{
     font-size: 40px;
-    margin-top: 10;
+    margin-top: 10px;
     margin-left: 10px;
 }
 .logoname h2{
@@ -42,6 +42,53 @@ header img{
     margin-top: 25px;
     margin-left: 5px;
     color: orange;
+}
+
+/* Page-level helpers for other HTML files */
+.page-container{
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background: rgba(255,255,255,0.95);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Make images scale to their container */
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Support simple <nav> markup used in about pages */
+nav{
+  background: rgba(0,0,0,0.85);
+  padding: 6px;
+  border-radius: 25%;
+}
+nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+nav li{display:inline-block}
+nav a{
+  color: #fff;
+  text-decoration: none;
+  padding: 30px;
+  border-radius: 60px;
+}
+nav a:hover{background: rgba(255,165,0,0.9); color:#000}
+
+@media (max-width: 800px){
+  .page-container{padding:0.75rem;margin:0.75rem}
+  header img{height:56px;width:56px}
+  .logoname h1,.logoname h2{font-size:1.6rem}
 }
 
 
@@ -185,6 +232,45 @@ input{
 
 p{
   font-size: 15px;
+}
+
+/* Team section styles */
+.team{
+  margin-top: 1.25rem;
+}
+.team-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  align-items: start;
+  margin-top: 0.75rem;
+}
+.team-member{
+  background: rgba(255,255,255,0.02);
+  text-align: center;
+  padding: 0.5rem;
+}
+.member-photo{
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 0.5rem;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+.member-name{
+  margin: 0.25rem 0 0.15rem;
+  font-weight: 600;
+}
+.member-role{
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 480px){
+  .member-photo{width:110px;height:110px}
 }
 
 
