@@ -64,8 +64,8 @@ img{
 /* Support simple <nav> markup used in about pages */
 nav{
   background: rgba(0,0,0,0.85);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  padding: 6px;
+  border-radius: 25%;
 }
 nav ul{
   list-style: none;
@@ -80,8 +80,8 @@ nav li{display:inline-block}
 nav a{
   color: #fff;
   text-decoration: none;
-  padding: 0.45rem 0.75rem;
-  border-radius: 6px;
+  padding: 30px;
+  border-radius: 60px;
 }
 nav a:hover{background: rgba(255,165,0,0.9); color:#000}
 
